@@ -1,5 +1,5 @@
 //
-//  PlayerController.swift
+//  Player Controller.swift
 //  GuildManager
 //
 //  Created by Connor Holland on 10/18/20.

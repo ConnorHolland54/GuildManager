@@ -21,9 +21,9 @@
 		DE628E59253D0916009C22D7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E58253D0916009C22D7 /* Player.swift */; };
 		DE628E61253D092F009C22D7 /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E60253D092F009C22D7 /* Guild.swift */; };
 		DE628E66253D093F009C22D7 /* Alliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E65253D093F009C22D7 /* Alliance.swift */; };
-		DE628E6C253D0AEF009C22D7 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E6B253D0AEF009C22D7 /* PlayerController.swift */; };
 		DE628E81253D0DC5009C22D7 /* GuildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E80253D0DC5009C22D7 /* GuildController.swift */; };
 		DE628E86253D0DDB009C22D7 /* Alliance Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E85253D0DDB009C22D7 /* Alliance Controller.swift */; };
+		DE628E8E253D0EF3009C22D7 /* Player Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E8D253D0EF3009C22D7 /* Player Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,9 @@
 		DE628E58253D0916009C22D7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DE628E60253D092F009C22D7 /* Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guild.swift; sourceTree = "<group>"; };
 		DE628E65253D093F009C22D7 /* Alliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alliance.swift; sourceTree = "<group>"; };
-		DE628E6B253D0AEF009C22D7 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		DE628E80253D0DC5009C22D7 /* GuildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildController.swift; sourceTree = "<group>"; };
 		DE628E85253D0DDB009C22D7 /* Alliance Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alliance Controller.swift"; sourceTree = "<group>"; };
+		DE628E8D253D0EF3009C22D7 /* Player Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player Controller.swift"; sourceTree = "<group>"; };
 		F1C4B97F86BBD77C53D70631 /* Pods-GuildManager-GuildManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager-GuildManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-GuildManager-GuildManagerUITests/Pods-GuildManager-GuildManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,9 +203,9 @@
 		DE628E6A253D0ADD009C22D7 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DE628E6B253D0AEF009C22D7 /* PlayerController.swift */,
 				DE628E80253D0DC5009C22D7 /* GuildController.swift */,
 				DE628E85253D0DDB009C22D7 /* Alliance Controller.swift */,
+				DE628E8D253D0EF3009C22D7 /* Player Controller.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -452,8 +452,8 @@
 				DE628E66253D093F009C22D7 /* Alliance.swift in Sources */,
 				DE628E86253D0DDB009C22D7 /* Alliance Controller.swift in Sources */,
 				DE628E09253D0670009C22D7 /* AppDelegate.swift in Sources */,
+				DE628E8E253D0EF3009C22D7 /* Player Controller.swift in Sources */,
 				DE628E81253D0DC5009C22D7 /* GuildController.swift in Sources */,
-				DE628E6C253D0AEF009C22D7 /* PlayerController.swift in Sources */,
 				DE628E59253D0916009C22D7 /* Player.swift in Sources */,
 				DE628E0B253D0670009C22D7 /* SceneDelegate.swift in Sources */,
 				DE628E61253D092F009C22D7 /* Guild.swift in Sources */,
