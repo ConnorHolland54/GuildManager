@@ -6,17 +6,24 @@
 //
 
 import UIKit
+import SideMenu
 
 class ProfileViewController: UIViewController {
     
-    
+    var menu: SideMenu?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sideMenuSetup()
+        PlayerController.shared.fetchCurrentPlayer()
         // Do any additional setup after loading the view.
     }
     
+    func sideMenuSetup() {
+        menu = SideMenu(rootViewController: UIViewController())
+        SideMenuManager.default.rightMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
 
     /*
     // MARK: - Navigation
