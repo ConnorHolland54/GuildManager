@@ -47,12 +47,22 @@ class LoginViewController: UIViewController {
             guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty, let passTwo = reenterPasswordTextField.text, !passTwo.isEmpty, let name = nameTextField.text, !name.isEmpty else {return}
             if password == passTwo {
                 //create user
-                PlayerController.shared.createPlayerWith(name: name, email: email, password: password)
+                PlayerController.shared.signIn(email: email, pass: password) { (success) in
+                    if success {
+                        self.performSegue(withIdentifier: "toProfile", sender: self)
+                    }
+                }
             } else {
                 //error
             }
         } else {
             //sign in
+            guard let email = emailTextField.text, !email.isEmpty, let pass = passwordTextField.text, !pass.isEmpty else {return}
+            PlayerController.shared.signIn(email: email, pass: pass) { (success) in
+                if success {
+                    self.performSegue(withIdentifier: "toProfile", sender: self)
+                }
+            }
         }
     }
     

@@ -10,6 +10,9 @@
 		2AA304E86B44EA0FCF219161 /* Pods_GuildManager_GuildManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3FBCC72268284190D80433 /* Pods_GuildManager_GuildManagerUITests.framework */; };
 		8A6B753FB5907E68DBB64FD2 /* Pods_GuildManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA687E580D66F0AF9C6CA3CF /* Pods_GuildManagerTests.framework */; };
 		DC7275ED19975FA5457C1B0F /* Pods_GuildManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134230F9082EB4D0183E9391 /* Pods_GuildManager.framework */; };
+		DE47419B253E1E8200DFC051 /* MainApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE47419A253E1E8200DFC051 /* MainApp.storyboard */; };
+		DE4741BC253E1F9D00DFC051 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4741BB253E1F9D00DFC051 /* SideMenuNavigationController.swift */; };
+		DE4741D4253E25AE00DFC051 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4741D3253E25AE00DFC051 /* ProfileViewController.swift */; };
 		DE628E09253D0670009C22D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E08253D0670009C22D7 /* AppDelegate.swift */; };
 		DE628E0B253D0670009C22D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE628E0A253D0670009C22D7 /* SceneDelegate.swift */; };
 		DE628E10253D0670009C22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE628E0E253D0670009C22D7 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		9F7BF3C9758007548AF52003 /* Pods-GuildManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager.debug.xcconfig"; path = "Target Support Files/Pods-GuildManager/Pods-GuildManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B8ED84E88F2F5C8D4B6EC888 /* Pods-GuildManager-GuildManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager-GuildManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GuildManager-GuildManagerUITests/Pods-GuildManager-GuildManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA687E580D66F0AF9C6CA3CF /* Pods_GuildManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuildManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE47419A253E1E8200DFC051 /* MainApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainApp.storyboard; sourceTree = "<group>"; };
+		DE4741BB253E1F9D00DFC051 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
+		DE4741D3253E25AE00DFC051 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE628E05253D0670009C22D7 /* GuildManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuildManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE628E08253D0670009C22D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE628E0A253D0670009C22D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,14 @@
 				BA687E580D66F0AF9C6CA3CF /* Pods_GuildManagerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE4741CC253E255800DFC051 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DE4741D3253E25AE00DFC051 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DE628DFC253D066F009C22D7 = {
@@ -220,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				DE628EAE253D1186009C22D7 /* String Constants.swift */,
+				DE4741BB253E1F9D00DFC051 /* SideMenuNavigationController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				DE628E0E253D0670009C22D7 /* Main.storyboard */,
+				DE47419A253E1E8200DFC051 /* MainApp.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +251,7 @@
 		DE628EB7253D1634009C22D7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE4741CC253E255800DFC051 /* Profile */,
 				DE628EB8253D1653009C22D7 /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
@@ -348,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE47419B253E1E8200DFC051 /* MainApp.storyboard in Resources */,
 				DE628E15253D0670009C22D7 /* LaunchScreen.storyboard in Resources */,
 				DE628E3D253D07B4009C22D7 /* GoogleService-Info.plist in Resources */,
 				DE628E12253D0670009C22D7 /* Assets.xcassets in Resources */,
@@ -483,7 +501,9 @@
 				DE628E86253D0DDB009C22D7 /* Alliance Controller.swift in Sources */,
 				DE628E09253D0670009C22D7 /* AppDelegate.swift in Sources */,
 				DE628E8E253D0EF3009C22D7 /* Player Controller.swift in Sources */,
+				DE4741BC253E1F9D00DFC051 /* SideMenuNavigationController.swift in Sources */,
 				DE628E81253D0DC5009C22D7 /* GuildController.swift in Sources */,
+				DE4741D4253E25AE00DFC051 /* ProfileViewController.swift in Sources */,
 				DE628E59253D0916009C22D7 /* Player.swift in Sources */,
 				DE628E0B253D0670009C22D7 /* SceneDelegate.swift in Sources */,
 				DE628E61253D092F009C22D7 /* Guild.swift in Sources */,

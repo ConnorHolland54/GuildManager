@@ -93,11 +93,22 @@
                         <outlet property="nameTextField" destination="e5j-et-RCz" id="G3C-DM-39x"/>
                         <outlet property="passwordTextField" destination="mTq-XT-nS2" id="vlS-ht-XrR"/>
                         <outlet property="reenterPasswordTextField" destination="csE-f0-cnN" id="6w6-qR-00U"/>
+                        <segue destination="a6k-RF-IlV" kind="show" identifier="toProfile" id="gFI-GH-PCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="138"/>
+        </scene>
+        <!--MainApp-->
+        <scene sceneID="wtt-yO-cU3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainApp" id="a6k-RF-IlV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8hq-E5-tqE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ByR-Ga-fvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-74"/>
         </scene>
     </scenes>
     <resources>
