@@ -7,6 +7,10 @@ target 'GuildManager' do
 
   # Pods for GuildManager
 pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
+pod 'Firebase/Storage'
 
   target 'GuildManagerTests' do
     inherit! :search_paths

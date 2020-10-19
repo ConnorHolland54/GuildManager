@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player {
+struct Player: Codable {
     var name: String
     var alliance: String?
     var currentGuild: String?

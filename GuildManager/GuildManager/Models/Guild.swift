@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Guild {
+struct Guild: Codable {
     var guildName: String
     var guildLeadership: [Player]
     var guildMembers: [Player]
