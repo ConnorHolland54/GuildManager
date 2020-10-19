@@ -1,31 +1,24 @@
 //
-//  ProfileViewController.swift
+//  CreateGuildViewController.swift
 //  GuildManager
 //
 //  Created by Connor Holland on 10/19/20.
 //
 
 import UIKit
-import SideMenu
 
-class ProfileViewController: UIViewController {
-    
-    var menu: SideMenu?
+class CreateGuildViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sideMenuSetup()
-        PlayerController.shared.fetchCurrentPlayer()
+
         // Do any additional setup after loading the view.
     }
     
-    
-    func sideMenuSetup() {
-        menu = SideMenu(rootViewController: UIViewController())
-        SideMenuManager.default.rightMenuNavigationController = menu
-        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    @IBAction func backButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
