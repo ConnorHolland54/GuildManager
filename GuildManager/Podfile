@@ -12,6 +12,8 @@ pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
 pod 'Firebase/Storage'
 
+pod 'SideMenu'
+
   target 'GuildManagerTests' do
     inherit! :search_paths
     # Pods for testing

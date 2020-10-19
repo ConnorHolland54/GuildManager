@@ -21,7 +21,7 @@ class PlayerController {
     
     // MARK: - CRUD Methods
     //Create
-    func createPlayerWith(name: String, email: String, password: String) {
+    func createPlayerWith(name: String, email: String, password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, err) in
             if let err = err {
                 print(err.localizedDescription)
@@ -37,14 +37,10 @@ class PlayerController {
                     ]
                     self.db.document(uid).setData(playerDict)
                     
-                    Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-                        if let err = err {
-                            print(err.localizedDescription)
-                        } else {
-                            print("Signed In")
-                            
-                        }
+                    self.signIn(email: email, pass: password) { (success) in
+                        return completion(success)
                     }
+                    
                 }
             }
         }
@@ -103,4 +99,16 @@ class PlayerController {
     
     //Delete
     
+    
+    // MARK: - Helper Methods
+    func signIn(email: String, pass: String, completion: @escaping (Bool) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                print("Signed In")
+                return completion(Auth.auth().currentUser?.uid != nil)
+            }
+        }
+    }
 }
