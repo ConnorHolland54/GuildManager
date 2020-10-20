@@ -17,7 +17,7 @@ class SideMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 8
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -27,6 +27,19 @@ class SideMenuTableViewController: UITableViewController {
             print("create guild")
             let storyboard = UIStoryboard(name: "CreateGuild", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(identifier: "createGuild") as? CreateGuildViewController else {return}
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+        } else if indexPath.row == 2 {
+            print("Create alliance")
+        } else if indexPath.row == 3 {
+            print("Players")
+            let storyboard = UIStoryboard(name: "Players", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(identifier: "playerList") as? PlayerListViewController else {return}
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+        } else if indexPath.row == 4 {
+            let storyboard = UIStoryboard(name: "Guilds", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(identifier: "guildList") as? GuildsViewController else {return}
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true, completion: nil)
         }

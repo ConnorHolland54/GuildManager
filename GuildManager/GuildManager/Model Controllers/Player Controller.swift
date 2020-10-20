@@ -100,7 +100,7 @@ class PlayerController {
         }
     }
     
-    func fetchAllPlayers() {
+    func fetchAllPlayers(completion: @escaping (Bool) -> Void) {
         players = []
         db.getDocuments { (snapshot, err) in
             if let err = err {
@@ -113,6 +113,7 @@ class PlayerController {
                     }
                     
                     switch result {
+                    
                     case .success(let player):
                         if let player = player {
                             self.players.append(player)
@@ -120,7 +121,10 @@ class PlayerController {
                     case .failure(let err):
                         print(err.localizedDescription)
                     }
+                    
+                    
                 }
+                return completion(!self.players.isEmpty)
             }
         }
     }

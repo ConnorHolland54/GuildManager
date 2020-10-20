@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Alliance View Controller-->
+        <scene sceneID="cf2-NP-dVv">
+            <objects>
+                <viewController storyboardIdentifier="createGuild" id="YKF-Lp-thI" customClass="CreateAllianceViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jzr-io-oUn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-PU-Hga">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Create Alliance" id="jV0-lA-Qbj">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="F5h-eF-1w0">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="YKF-Lp-thI" id="CPy-y0-c3U"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leM-OO-pRS">
+                                <rect key="frame" x="8" y="128" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-cW-rej">
+                                <rect key="frame" x="184" y="182" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="finishButtonTapped:" destination="YKF-Lp-thI" eventType="touchUpInside" id="LTF-p3-lXC"/>
+                                    <action selector="submitButtonTapped:" destination="YKF-Lp-thI" eventType="touchUpInside" id="Ceu-QD-7YT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pUC-JF-kNe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="leM-OO-pRS" firstAttribute="top" secondItem="fR3-PU-Hga" secondAttribute="bottom" constant="40" id="1aM-96-WnF"/>
+                            <constraint firstItem="NtC-cW-rej" firstAttribute="centerX" secondItem="leM-OO-pRS" secondAttribute="centerX" id="AkY-71-YID"/>
+                            <constraint firstItem="leM-OO-pRS" firstAttribute="leading" secondItem="pUC-JF-kNe" secondAttribute="leading" constant="8" id="JW6-NH-Z74"/>
+                            <constraint firstItem="pUC-JF-kNe" firstAttribute="trailing" secondItem="leM-OO-pRS" secondAttribute="trailing" constant="8" id="Vfw-fp-gFs"/>
+                            <constraint firstItem="NtC-cW-rej" firstAttribute="top" secondItem="leM-OO-pRS" secondAttribute="bottom" constant="20" id="e4l-AN-ua2"/>
+                            <constraint firstItem="fR3-PU-Hga" firstAttribute="top" secondItem="pUC-JF-kNe" secondAttribute="top" id="iog-ED-wJf"/>
+                            <constraint firstItem="fR3-PU-Hga" firstAttribute="leading" secondItem="jzr-io-oUn" secondAttribute="leading" id="lAa-Wa-AHb"/>
+                            <constraint firstItem="pUC-JF-kNe" firstAttribute="trailing" secondItem="fR3-PU-Hga" secondAttribute="trailing" id="tEm-27-Ome"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aliianceNameTextField" destination="leM-OO-pRS" id="Q9h-SQ-i6i"/>
+                        <outlet property="guildNameTextField" destination="leM-OO-pRS" id="5DG-w1-H5a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3M-lK-n2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
