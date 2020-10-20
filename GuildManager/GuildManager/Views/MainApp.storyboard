@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Icx-lR-t4r">
             <objects>
-                <viewController id="Znp-0d-es1" sceneMemberID="viewController">
+                <viewController id="Znp-0d-es1" customClass="ProfileViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifr-BV-ZtO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTB-dT-3Br" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.71014492753625" y="186.83035714285714"/>
+            <point key="canvasLocation" x="332" y="187"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="TtS-CH-wdQ">

@@ -28,15 +28,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nn9-Y8-3DX">
+                                <rect key="frame" x="8" y="128" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMa-Es-7qm">
+                                <rect key="frame" x="184" y="182" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="finishButtonTapped:" destination="O4i-oN-E9c" eventType="touchUpInside" id="XMf-oq-vBe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gvI-aT-0i2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="msh-8T-fiG" firstAttribute="top" secondItem="gvI-aT-0i2" secondAttribute="top" id="ARr-Xt-a7X"/>
+                            <constraint firstItem="gvI-aT-0i2" firstAttribute="trailing" secondItem="Nn9-Y8-3DX" secondAttribute="trailing" constant="8" id="Bmc-Y5-TyM"/>
+                            <constraint firstItem="Nn9-Y8-3DX" firstAttribute="leading" secondItem="gvI-aT-0i2" secondAttribute="leading" constant="8" id="E9G-4g-bOB"/>
                             <constraint firstItem="msh-8T-fiG" firstAttribute="leading" secondItem="OrM-Vu-QXR" secondAttribute="leading" id="PtD-MY-g4H"/>
                             <constraint firstItem="gvI-aT-0i2" firstAttribute="trailing" secondItem="msh-8T-fiG" secondAttribute="trailing" id="Via-mC-cus"/>
+                            <constraint firstItem="xMa-Es-7qm" firstAttribute="centerX" secondItem="Nn9-Y8-3DX" secondAttribute="centerX" id="WuV-le-5sV"/>
+                            <constraint firstItem="xMa-Es-7qm" firstAttribute="top" secondItem="Nn9-Y8-3DX" secondAttribute="bottom" constant="20" id="btH-mo-GwS"/>
+                            <constraint firstItem="Nn9-Y8-3DX" firstAttribute="top" secondItem="msh-8T-fiG" secondAttribute="bottom" constant="40" id="kp9-Ff-YDh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guildNameTextField" destination="Nn9-Y8-3DX" id="Ab1-o9-MAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3g-aY-j6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
