@@ -25,11 +25,11 @@ class GuildController {
         
         let guildDict: [String: Any] = [
             StringConstants.guildName: name,
-            StringConstants.guildManager: user.uid
+            StringConstants.guildManager: user.uid,
+            StringConstants.guildLeadership: [user.uid],
+            StringConstants.members: []
         ]
         db.document(name).setData(guildDict)
-        db.document(name).collection("Leaders").document(user.uid).setData([StringConstants.uid: user.uid])
-//        db.document(name).collection("Members").document(user.uid).setData([StringConstants.uid: user.uid])
     }
     
     
@@ -43,14 +43,16 @@ class GuildController {
             } else {
                 
                 for document in snapshot!.documents {
+                    
                     let result = Result {
                         try document.data(as: Guild.self)
                     }
                     
                     switch result {
-                    case .success(let guild):
-                        if let guild = guild {
+                    case .success(let fetchedGuild):
+                        if let guild = fetchedGuild {
                             self.guilds.append(guild)
+                            print(guild)
                         }
                     case .failure(let err):
                         print(err.localizedDescription)
