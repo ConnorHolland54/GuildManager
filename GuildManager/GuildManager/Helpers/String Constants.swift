@@ -16,8 +16,8 @@ struct StringConstants {
     static let uid = "uid"
     
     // MARK: - Guild Constants
-    static let guildName = "guild name"
-    static let leadership = "leadership"
+    static let guildName = "guildName"
+    static let guildLeadership = "guildLeadership"
     static let members = "members"
-    static let guildManager = "gm"
+    static let guildManager = "guildManager"
 }

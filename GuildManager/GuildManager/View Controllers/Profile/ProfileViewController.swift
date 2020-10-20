@@ -16,9 +16,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         sideMenuSetup()
         PlayerController.shared.fetchCurrentPlayer()
-        print(PlayerController.shared.currentPlayer)
+//        print(PlayerController.shared.currentPlayer)
         GuildController.shared.fetchGuilds()
-        print(GuildController.shared.guilds)
+        print("Guilds: \(GuildController.shared.guilds)")
         // Do any additional setup after loading the view.
     }
     

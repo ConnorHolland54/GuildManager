@@ -10,6 +10,6 @@ import Foundation
 struct Guild: Codable {
     var guildName: String
     var guildManager: String
-//    var guildLeadership: [Player]
-//    var guildMembers: [Player]
+    var guildLeadership: [String]
+    var members: [String]
 }
