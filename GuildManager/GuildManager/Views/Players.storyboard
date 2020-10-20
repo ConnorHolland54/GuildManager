@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JZV-2e-oPY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player List View Controller-->
+        <scene sceneID="Yb7-lI-63P">
+            <objects>
+                <viewController storyboardIdentifier="playerList" id="JZV-2e-oPY" customClass="PlayerListViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96Z-X3-BFr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWw-Hz-X8l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Players" id="duv-6A-bnx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7bb-ce-AEB">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="JZV-2e-oPY" id="6FO-gq-Lyp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Af7-oj-KVM">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" textLabel="cEp-5z-UU9" detailTextLabel="AEe-QY-Jol" style="IBUITableViewCellStyleValue1" id="988-GJ-uxf">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="988-GJ-uxf" id="14w-2l-kDE">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cEp-5z-UU9">
+                                                    <rect key="frame" x="20" y="12" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AEe-QY-Jol">
+                                                    <rect key="frame" x="318" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2dR-PE-wb9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AWw-Hz-X8l" firstAttribute="leading" secondItem="2dR-PE-wb9" secondAttribute="leading" id="NZl-mj-4FR"/>
+                            <constraint firstItem="AWw-Hz-X8l" firstAttribute="trailing" secondItem="2dR-PE-wb9" secondAttribute="trailing" id="XSV-yp-1rg"/>
+                            <constraint firstItem="AWw-Hz-X8l" firstAttribute="top" secondItem="2dR-PE-wb9" secondAttribute="top" id="ZCr-pz-PwD"/>
+                            <constraint firstItem="2dR-PE-wb9" firstAttribute="trailing" secondItem="Af7-oj-KVM" secondAttribute="trailing" constant="16" id="Zhj-vA-xfn"/>
+                            <constraint firstItem="Af7-oj-KVM" firstAttribute="top" secondItem="AWw-Hz-X8l" secondAttribute="bottom" constant="16" id="bjI-5m-KLJ"/>
+                            <constraint firstItem="Af7-oj-KVM" firstAttribute="leading" secondItem="2dR-PE-wb9" secondAttribute="leading" constant="16" id="fgq-FS-gCR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Af7-oj-KVM" secondAttribute="bottom" constant="16" id="saL-2T-9fh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VoQ-v1-GJi">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QYn-Yt-4Iv">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="JZV-2e-oPY" id="pF7-NY-oti"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playerListTableView" destination="Af7-oj-KVM" id="HU2-9l-cOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xpa-bL-VHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.1159420289857" y="240.40178571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
