@@ -12,4 +12,5 @@ struct Player: Codable {
     var alliance: String?
     var currentGuild: String?
     var homeGuild: String?
+    let uid: String
 }

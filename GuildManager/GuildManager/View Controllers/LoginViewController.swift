@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
             guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty, let passTwo = reenterPasswordTextField.text, !passTwo.isEmpty, let name = nameTextField.text, !name.isEmpty else {return}
             if password == passTwo {
                 //create user
-                PlayerController.shared.signIn(email: email, pass: password) { (success) in
+                PlayerController.shared.createPlayerWith(name: name, email: email, password: password) { (success) in
                     if success {
                         self.performSegue(withIdentifier: "toProfile", sender: self)
                     }

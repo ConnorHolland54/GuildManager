@@ -33,7 +33,8 @@ class PlayerController {
                         StringConstants.name: name,
                         StringConstants.alliance: "",
                         StringConstants.homeGuild: "",
-                        StringConstants.currentGuild: ""
+                        StringConstants.currentGuild: "",
+                        StringConstants.uid: Auth.auth().currentUser!.uid
                     ]
                     self.db.document(uid).setData(playerDict)
                     
@@ -50,6 +51,29 @@ class PlayerController {
     
     
     //Read
+    func fetchPlayerWith(uid: String, completion: @escaping (Result<Player,Error>) -> Void) {
+        db.document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                
+                let result = Result {
+                    try snapshot?.data(as: Player.self)
+                }
+                
+                switch result {
+                case .success(let fetchedPlayer):
+                    if let player = fetchedPlayer {
+                        completion(.success(player))
+                    }
+                    
+                case .failure(let err):
+                    completion(.failure(err))
+                } 
+            }
+        }
+    }
+    
     func fetchCurrentPlayer() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let user = db.document(uid)
@@ -64,7 +88,11 @@ class PlayerController {
                 
                 switch result {
                 case .success(let user):
-                    self.currentPlayer = user
+                    if let player = user {
+                        print(player)
+                        self.currentPlayer = player
+                        print(self.currentPlayer)
+                    }
                 case .failure(let err):
                     print(err.localizedDescription)
                 }
