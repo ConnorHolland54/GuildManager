@@ -11,5 +11,5 @@ struct Guild: Codable {
     var guildName: String
     var guildManager: String
     var guildLeadership: [String]
-    var members: [String]
+//    var members: [String]
 }

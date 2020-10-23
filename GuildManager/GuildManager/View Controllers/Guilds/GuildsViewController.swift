@@ -17,6 +17,16 @@ class GuildsViewController: UIViewController {
         super.viewDidLoad()
         guildListTableView.delegate = self
         guildListTableView.dataSource = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GuildController.shared.fetchGuilds { (success) in
+            if success {
+                self.guildListTableView.reloadData()
+            }
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -42,20 +52,21 @@ extension GuildsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = guildListTableView.dequeueReusableCell(withIdentifier: "guildCell", for: indexPath)
+        guard let cell = guildListTableView.dequeueReusableCell(withIdentifier: "guildCell", for: indexPath) as? GuildListTableViewCell else {return UITableViewCell()}
         let guild = GuildController.shared.guilds[indexPath.row]
-        cell.textLabel?.text = "Guild Name: \(guild.guildName)"
+        cell.guild = guild
         
-        PlayerController.shared.fetchPlayerWith(uid: guild.guildManager) { (result) in
-            switch result {
-            case .success(let player):
-                cell.detailTextLabel?.text = "GM: \(player.name)"
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
+//        PlayerController.shared.fetchPlayerWith(uid: guild.guildManager) { (result) in
+//            switch result {
+//            case .success(let player):
+//                cell.detailTextLabel?.text = "GM: \(player.name)"
+//            case .failure(let err):
+//                print(err.localizedDescription)
+//            }
+//        }
      return cell
     }
+    
     
     
 }
