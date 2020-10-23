@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -17,9 +18,11 @@ class ProfileViewController: UIViewController {
         sideMenuSetup()
         PlayerController.shared.fetchCurrentPlayer()
 //        print(PlayerController.shared.currentPlayer)
-        GuildController.shared.fetchGuilds()
-        print("Guilds: \(GuildController.shared.guilds)")
-        // Do any additional setup after loading the view.
+//        GuildController.shared.fetchGuilds()
+//        print("Guilds: \(GuildController.shared.guilds)")
+        
+        GuildController.shared.fetchGuildsWith(uid: Auth.auth().currentUser!.uid)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

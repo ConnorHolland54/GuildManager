@@ -39,6 +39,9 @@
 		DE6B3856253F8D4D00CFF9E7 /* GuildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B3855253F8D4D00CFF9E7 /* GuildsViewController.swift */; };
 		DE6B385E253F919D00CFF9E7 /* CreateAlliance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6B385D253F919D00CFF9E7 /* CreateAlliance.storyboard */; };
 		DE6B3863253F91CD00CFF9E7 /* CreateAllianceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B3862253F91CD00CFF9E7 /* CreateAllianceViewController.swift */; };
+		DE85543925435D3800B402E2 /* GuildListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85543825435D3800B402E2 /* GuildListTableViewCell.swift */; };
+		DE96AB9A253FAFD0006E1215 /* MyGuilds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE96AB99253FAFD0006E1215 /* MyGuilds.storyboard */; };
+		DE96AB9F253FB27D006E1215 /* MyGuildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96AB9E253FB27D006E1215 /* MyGuildsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		DE6B3855253F8D4D00CFF9E7 /* GuildsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildsViewController.swift; sourceTree = "<group>"; };
 		DE6B385D253F919D00CFF9E7 /* CreateAlliance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAlliance.storyboard; sourceTree = "<group>"; };
 		DE6B3862253F91CD00CFF9E7 /* CreateAllianceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAllianceViewController.swift; sourceTree = "<group>"; };
+		DE85543825435D3800B402E2 /* GuildListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildListTableViewCell.swift; sourceTree = "<group>"; };
+		DE96AB99253FAFD0006E1215 /* MyGuilds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGuilds.storyboard; sourceTree = "<group>"; };
+		DE96AB9E253FB27D006E1215 /* MyGuildsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGuildsViewController.swift; sourceTree = "<group>"; };
 		F1C4B97F86BBD77C53D70631 /* Pods-GuildManager-GuildManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager-GuildManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-GuildManager-GuildManagerUITests/Pods-GuildManager-GuildManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +284,7 @@
 				DE6B3844253F838B00CFF9E7 /* Players.storyboard */,
 				DE6B384F253F8CDF00CFF9E7 /* Guilds.storyboard */,
 				DE6B385D253F919D00CFF9E7 /* CreateAlliance.storyboard */,
+				DE96AB99253FAFD0006E1215 /* MyGuilds.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				DE6B3855253F8D4D00CFF9E7 /* GuildsViewController.swift */,
+				DE96AB9E253FB27D006E1215 /* MyGuildsViewController.swift */,
+				DE85543825435D3800B402E2 /* GuildListTableViewCell.swift */,
 			);
 			path = Guilds;
 			sourceTree = "<group>";
@@ -425,6 +434,7 @@
 				DE6B385E253F919D00CFF9E7 /* CreateAlliance.storyboard in Resources */,
 				DE628E15253D0670009C22D7 /* LaunchScreen.storyboard in Resources */,
 				DE4741EB253E368100DFC051 /* CreateGuild.storyboard in Resources */,
+				DE96AB9A253FAFD0006E1215 /* MyGuilds.storyboard in Resources */,
 				DE628E3D253D07B4009C22D7 /* GoogleService-Info.plist in Resources */,
 				DE628E12253D0670009C22D7 /* Assets.xcassets in Resources */,
 				DE628E10253D0670009C22D7 /* Main.storyboard in Resources */,
@@ -558,6 +568,7 @@
 				DE628E66253D093F009C22D7 /* Alliance.swift in Sources */,
 				DE6B384B253F83ED00CFF9E7 /* PlayerListViewController.swift in Sources */,
 				DE6B3856253F8D4D00CFF9E7 /* GuildsViewController.swift in Sources */,
+				DE96AB9F253FB27D006E1215 /* MyGuildsViewController.swift in Sources */,
 				DE4741E1253E30A000DFC051 /* SideMenuTableViewController.swift in Sources */,
 				DE628E86253D0DDB009C22D7 /* Alliance Controller.swift in Sources */,
 				DE628E09253D0670009C22D7 /* AppDelegate.swift in Sources */,
@@ -573,6 +584,7 @@
 				DE6B3863253F91CD00CFF9E7 /* CreateAllianceViewController.swift in Sources */,
 				DE4741F1253E36C000DFC051 /* CreateGuildViewController.swift in Sources */,
 				DE4741E6253E34A500DFC051 /* Extensions.swift in Sources */,
+				DE85543925435D3800B402E2 /* GuildListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
