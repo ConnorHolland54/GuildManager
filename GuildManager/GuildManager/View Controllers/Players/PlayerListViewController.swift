@@ -57,10 +57,9 @@ extension PlayerListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playerListTableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
         let player = PlayerController.shared.players[indexPath.row]
-        cell.textLabel?.text = player.name
-        cell.detailTextLabel?.text = player.currentGuild
+        cell.textLabel?.text = "Name: \(player.name)"
+        cell.detailTextLabel?.text = "Current Guild: \(player.currentGuild ?? "N/A")"
         return cell
     }
-    
     
 }
