@@ -42,6 +42,11 @@ class SideMenuTableViewController: UITableViewController {
             guard let viewController = storyboard.instantiateViewController(identifier: "guildList") as? GuildsViewController else {return}
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true, completion: nil)
+        } else if indexPath.row == 5 {
+            let storyboard = UIStoryboard(name: "MyGuilds", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(identifier: "myGuilds") as? MyGuildsViewController else {return}
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
         }
         
         tableView.deselectRow(at: indexPath, animated: false)

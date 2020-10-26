@@ -18,7 +18,10 @@ class MyGuildsViewController: UIViewController {
         myGuildsTableView.dataSource = self
     }
     
-
+    @IBAction func backButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

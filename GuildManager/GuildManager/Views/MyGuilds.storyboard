@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6yw-wn-mOo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gmK-KK-7K1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -11,13 +11,13 @@
         <!--My Guilds-->
         <scene sceneID="8Mh-xs-XMa">
             <objects>
-                <viewController id="gmK-KK-7K1" customClass="MyGuildsViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myGuilds" id="gmK-KK-7K1" customClass="MyGuildsViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKz-HK-TsJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-V9-Tkt">
-                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <rect key="frame" x="16" y="96" width="382" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myGuildCell" textLabel="GYb-CH-c1Z" style="IBUITableViewCellStyleDefault" id="tZg-tT-oOC">
@@ -39,14 +39,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYW-n4-hLE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="MyGuilds" id="lYs-x1-8LL">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RPU-8H-apo">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="gmK-KK-7K1" id="eZx-f3-s1X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ake-5N-Sxn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lys-V9-Tkt" firstAttribute="leading" secondItem="ake-5N-Sxn" secondAttribute="leading" constant="16" id="7g5-z2-g4U"/>
+                            <constraint firstItem="vYW-n4-hLE" firstAttribute="top" secondItem="ake-5N-Sxn" secondAttribute="top" id="Ctu-4P-sKd"/>
                             <constraint firstItem="ake-5N-Sxn" firstAttribute="bottom" secondItem="Lys-V9-Tkt" secondAttribute="bottom" constant="16" id="Pb5-gq-1DF"/>
+                            <constraint firstItem="Lys-V9-Tkt" firstAttribute="top" secondItem="vYW-n4-hLE" secondAttribute="bottom" constant="8" id="PbG-Ba-bxB"/>
+                            <constraint firstItem="vYW-n4-hLE" firstAttribute="leading" secondItem="dKz-HK-TsJ" secondAttribute="leading" id="c46-vs-MUn"/>
                             <constraint firstItem="ake-5N-Sxn" firstAttribute="trailing" secondItem="Lys-V9-Tkt" secondAttribute="trailing" constant="16" id="gaY-mt-vXh"/>
-                            <constraint firstItem="Lys-V9-Tkt" firstAttribute="top" secondItem="ake-5N-Sxn" secondAttribute="top" constant="16" id="jUL-lu-T7u"/>
+                            <constraint firstItem="ake-5N-Sxn" firstAttribute="trailing" secondItem="vYW-n4-hLE" secondAttribute="trailing" id="pcD-JC-B6p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Guilds" id="NgM-4o-2yf"/>
@@ -56,25 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbw-DT-3K5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110.144927536232" y="178.79464285714286"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="S5x-oB-a93">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6yw-wn-mOo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f4U-xq-S6B">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gmK-KK-7K1" kind="relationship" relationship="rootViewController" id="JpP-sS-8t9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SHO-NR-K1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="200.00000000000003" y="178.79464285714286"/>
+            <point key="canvasLocation" x="1108.6956521739132" y="180.80357142857142"/>
         </scene>
     </scenes>
     <resources>
