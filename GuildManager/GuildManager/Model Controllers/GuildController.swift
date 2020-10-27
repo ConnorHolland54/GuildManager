@@ -17,6 +17,7 @@ class GuildController {
     
     var guilds: [Guild] = []
     var myGuilds: [Guild] = []
+    var guildRequestsPlayer: [Player] = []
     
     
     // MARK: - CRUD Methods
@@ -35,6 +36,30 @@ class GuildController {
     
     
     //Read
+    
+    func fetchRequestsFor(guildName: String) {
+        db.document(guildName).collection("Requests").getDocuments { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                
+                for document in snapshot!.documents {
+                    let data = document.data()
+                    print(data["uid"]!)
+                    PlayerController.shared.fetchPlayerWith(uid: data["uid"]! as! String) { (result) in
+                        switch result {
+                        case .success(let player):
+                            self.guildRequestsPlayer.append(player)
+                        case .failure(let err):
+                            print(err.localizedDescription)
+                        }
+                    }
+                }  
+            }
+        }
+    }
+    
+    
     func fetchGuilds(completion: @escaping (Bool) -> Void) {
         guilds = []
         db.getDocuments { (snapshot, err) in
