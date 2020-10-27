@@ -18,19 +18,26 @@ class MyGuildsViewController: UIViewController {
         myGuildsTableView.dataSource = self
     }
     
+
+
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "myGuildDetail" {
+            guard let indexPath = myGuildsTableView.indexPathForSelectedRow, let destination = segue.destination as? MyGuildDetailViewController else {return}
+            let itemToSend = GuildController.shared.myGuilds[indexPath.row]
+            destination.guild = itemToSend
+        }
     }
-    */
+
 
 }
 
