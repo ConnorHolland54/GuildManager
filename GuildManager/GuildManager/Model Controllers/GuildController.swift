@@ -18,6 +18,7 @@ class GuildController {
     var guilds: [Guild] = []
     var myGuilds: [Guild] = []
     var guildRequestsPlayer: [Player] = []
+    var selectedGuildName: String?
     
     
     // MARK: - CRUD Methods
@@ -88,7 +89,9 @@ class GuildController {
         }
     }
     
-    func fetchGuildsWith(uid: String) {
+    func fetchGuildsWith(uid: String, completion: @escaping (Bool) -> Void) {
+//        myGuilds = []
+        var tempGuild: [Guild] = []
         let query = db.whereField(StringConstants.guildManager, isEqualTo: uid)
         
         query.getDocuments { (snapshot, err) in
@@ -104,13 +107,17 @@ class GuildController {
                     switch result {
                     case .success(let guild):
                         if let guild = guild {
-                            self.myGuilds.append(guild)
+//                            self.myGuilds.append(guild)
+                            tempGuild.append(guild)
                         }
                     case .failure(let err):
                         print(err.localizedDescription)
                     }
                 }
             }
+            self.myGuilds = []
+            self.myGuilds = tempGuild
+            completion(!self.myGuilds.isEmpty)
         }
     }
     
@@ -118,7 +125,10 @@ class GuildController {
     
     //Update
     //Delete
-    
+    func deleteFromRequests(player: Player) {
+        guard let index = guildRequestsPlayer.firstIndex(of: player) else {return}
+        guildRequestsPlayer.remove(at: index)
+    }
     
     // Checks if user already requested to join guild
     func requestCheck(guildName: String, uid: String) {
@@ -141,6 +151,14 @@ class GuildController {
             }
         }
     }
+    
+    
+    func updateRequestAndMembers(uid: String, player: Player) {
+        db.document(selectedGuildName!).collection("Requests").document(uid).delete()
+        db.document(selectedGuildName!).collection("Members").document(uid).setData([StringConstants.uid: uid])
+        deleteFromRequests(player: player)
+    }
+    
     
     
 }

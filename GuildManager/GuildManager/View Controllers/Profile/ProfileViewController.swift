@@ -20,8 +20,12 @@ class ProfileViewController: UIViewController {
 //        print(PlayerController.shared.currentPlayer)
 //        GuildController.shared.fetchGuilds()
 //        print("Guilds: \(GuildController.shared.guilds)")
-        
-        GuildController.shared.fetchGuildsWith(uid: Auth.auth().currentUser!.uid)
+
+        GuildController.shared.fetchGuildsWith(uid: Auth.auth().currentUser!.uid) { (success) in
+            if success {
+                print("Fetched")
+            }
+        }
         
     }
     
