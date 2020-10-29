@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MyGuildsViewController: UIViewController {
 
@@ -16,6 +17,18 @@ class MyGuildsViewController: UIViewController {
         super.viewDidLoad()
         myGuildsTableView.delegate = self
         myGuildsTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let user = Auth.auth().currentUser else {return}
+        GuildController.shared.fetchGuildsWith(uid: user.uid) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.myGuildsTableView.reloadData()
+                }
+            }
+        }
     }
     
 

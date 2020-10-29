@@ -11,6 +11,11 @@ class RequestsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     // MARK: - Table view data source
@@ -25,6 +30,7 @@ class RequestsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "requestCell", for: indexPath) as? RequestsTableViewCell else {return UITableViewCell()}
         let player = GuildController.shared.guildRequestsPlayer[indexPath.row]
         cell.player = player
+        cell.tableViewRefreshDelegate = self
 
         return cell
     }
@@ -75,4 +81,14 @@ class RequestsTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension RequestsTableViewController: ReloadDelegate {
+    func refresh() {
+//        GuildController.shared.fetchRequestsFor(guildName: GuildController.shared.selectedGuildName!)
+        tableView.reloadData()
+        print(GuildController.shared.guildRequestsPlayer.count)
+    }
+    
+    
 }

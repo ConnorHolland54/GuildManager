@@ -20,6 +20,7 @@ class MyGuildDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let name = guild?.guildName else {return}
+        GuildController.shared.selectedGuildName = guild?.guildName
         GuildController.shared.fetchRequestsFor(guildName: name)
         print(GuildController.shared.guildRequestsPlayer)
     }
