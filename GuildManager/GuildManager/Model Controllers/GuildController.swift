@@ -64,9 +64,9 @@ class GuildController {
         }
     }
     
-    func fetchMembers() {
+    func fetchMembers(guildName: String) {
         var fetched: [Player] = []
-        db.document(selectedGuildName!).collection("Members").getDocuments { (snapshot, err) in
+        db.document(guildName).collection("Members").getDocuments { (snapshot, err) in
             if let err = err {
                 print(err.localizedDescription)
             } else {
@@ -90,64 +90,9 @@ class GuildController {
         }
     }
     
-    
-    
-    
-//    func fetchRequestsFor(guildName: String, collection: String, completion: @escaping (Bool) -> Void) {
-//        var fetched: [Player] = []
-//        db.document(guildName).collection(collection).getDocuments { (snapshot, err) in
-//            if let err = err {
-//                print(err.localizedDescription)
-//            } else {
-//                for document in snapshot!.documents {
-//                    let data = document.data()
-//                    print(data["uid"]!)
-//                    PlayerController.shared.fetchPlayerWith(uid: data["uid"]! as! String) { (result) in
-//                        switch result {
-//                        case .success(let player):
-////                            self.guildRequestsPlayer.append(player)
-//                            if collection == "Requests" {
-////                                self.guildRequestsPlayer.append(player)
-//                                fetched.append(player)
-//                            } else if collection == "Members" {
-//                                fetched.append(player)
-//                            }
-//                        case .failure(let err):
-//                            print(err.localizedDescription)
-//                        }
-//                    }
-//                }
-//            }
-//            print(fetched.count)
-//            if collection == "Requests" {
-//                return completion(!self.guildRequestsPlayer.isEmpty)
-//            } else if collection == "Members" {
-//                return completion(!self.members.isEmpty)
-//            }
-//        }
-//    }
-    
-//    func fetchRequestsFor(guildName: String) {
-//        db.document(guildName).collection("Requests").getDocuments { (snapshot, err) in
-//            if let err = err {
-//                print(err.localizedDescription)
-//            } else {
-//
-//                for document in snapshot!.documents {
-//                    let data = document.data()
-//                    print(data["uid"]!)
-//                    PlayerController.shared.fetchPlayerWith(uid: data["uid"]! as! String) { (result) in
-//                        switch result {
-//                        case .success(let player):
-//                            self.guildRequestsPlayer.append(player)
-//                        case .failure(let err):
-//                            print(err.localizedDescription)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
+
+
+
     
     func fetchGuilds(completion: @escaping (Bool) -> Void) {
         guilds = []

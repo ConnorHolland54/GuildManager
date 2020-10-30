@@ -25,7 +25,7 @@ class MyGuildDetailViewController: UIViewController {
         
         //test
         GuildController.shared.fetchRequestsFor(guildName: name)
-        GuildController.shared.fetchMembers()
+        GuildController.shared.fetchMembers(guildName: name)
         
         
         print(GuildController.shared.members.count)

@@ -38,7 +38,8 @@ class RequestsTableViewCell: UITableViewCell {
         acceptButton.setTitle("Accepted", for: .normal)
         GuildController.shared.updateRequestAndMembers(uid: player.uid, player: player)
         acceptButton.isEnabled = false
-        GuildController.shared.fetchMembers()
+//        PlayerController.shared.updateCurrentGuild(player: player)
+        GuildController.shared.fetchMembers(guildName: GuildController.shared.selectedGuildName!)
         tableViewRefreshDelegate.refresh()
     }
     
