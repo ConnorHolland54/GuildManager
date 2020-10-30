@@ -63,8 +63,9 @@ extension MyGuildsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myGuildsTableView.dequeueReusableCell(withIdentifier: "myGuildCell", for: indexPath)
         let guild = GuildController.shared.myGuilds[indexPath.row]
+        GuildController.shared.fetchMembers(guildName: guild.guildName)
         cell.textLabel?.text = guild.guildName
-        cell.detailTextLabel?.text = "Members: count"
+        cell.detailTextLabel?.text = "Members: \(GuildController.shared.members.count)"
         return cell
     }
     

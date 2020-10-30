@@ -44,6 +44,7 @@ class SideMenuTableViewController: UITableViewController {
             self.present(viewController, animated: true, completion: nil)
         } else if indexPath.row == 5 {
             let storyboard = UIStoryboard(name: "MyGuilds", bundle: nil)
+//            GuildController.shared.fetchMembers()
             guard let viewController = storyboard.instantiateViewController(identifier: "myGuilds") as? MyGuildsViewController else {return}
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true, completion: nil)

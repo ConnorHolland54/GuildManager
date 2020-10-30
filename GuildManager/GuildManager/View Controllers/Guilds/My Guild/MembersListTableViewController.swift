@@ -17,6 +17,12 @@ class MembersListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         guard let name = GuildController.shared.selectedGuildName else {return}
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     // MARK: - Table view data source
 

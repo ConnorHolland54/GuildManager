@@ -143,14 +143,39 @@
         <!--Members List Table View Controller-->
         <scene sceneID="eJX-fC-uJu">
             <objects>
-                <tableViewController id="JD6-PU-X6j" customClass="MembersListTableViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="JD6-PU-X6j" customClass="MembersListTableViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wg-SL-Czb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="b3h-5F-4eO">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YN6-xd-rhw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <items>
+                                        <navigationItem title="Members" id="9GP-Ym-thT">
+                                            <barButtonItem key="leftBarButtonItem" title="Back" id="bTt-1p-frW">
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="JD6-PU-X6j" id="hSN-JC-xOi"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="YN6-xd-rhw" firstAttribute="leading" secondItem="b3h-5F-4eO" secondAttribute="leading" id="6IX-lQ-rfe"/>
+                                <constraint firstItem="YN6-xd-rhw" firstAttribute="top" secondItem="b3h-5F-4eO" secondAttribute="top" id="CCj-eE-Qo1"/>
+                                <constraint firstAttribute="trailing" secondItem="YN6-xd-rhw" secondAttribute="trailing" id="IlM-sQ-3Ao"/>
+                                <constraint firstAttribute="bottom" secondItem="YN6-xd-rhw" secondAttribute="bottom" id="j7K-Fo-zdg"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" textLabel="OtM-6C-r6e" style="IBUITableViewCellStyleDefault" id="4dw-WS-q68">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dw-WS-q68" id="ZpF-KK-M6V">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -172,7 +197,6 @@
                             <outlet property="delegate" destination="JD6-PU-X6j" id="Uyo-ZS-Mae"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mKZ-3W-A7r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebA-xR-iVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,14 +205,39 @@
         <!--Requests Table View Controller-->
         <scene sceneID="iK5-E5-U7e">
             <objects>
-                <tableViewController id="eQx-Ml-XER" customClass="RequestsTableViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="eQx-Ml-XER" customClass="RequestsTableViewController" customModule="GuildManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gvk-O6-KJv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="fiL-i2-SC7">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDg-AF-U9g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <items>
+                                        <navigationItem title="Requests" id="Fmz-x0-wgG">
+                                            <barButtonItem key="leftBarButtonItem" title="Back" id="cKs-nL-n6h">
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="eQx-Ml-XER" id="t9r-XU-CUq"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="VDg-AF-U9g" firstAttribute="leading" secondItem="fiL-i2-SC7" secondAttribute="leading" id="1kg-xK-XSO"/>
+                                <constraint firstAttribute="trailing" secondItem="VDg-AF-U9g" secondAttribute="trailing" id="TCe-rA-EHa"/>
+                                <constraint firstItem="VDg-AF-U9g" firstAttribute="top" secondItem="fiL-i2-SC7" secondAttribute="top" id="Z1T-3X-Koi"/>
+                                <constraint firstAttribute="bottom" secondItem="VDg-AF-U9g" secondAttribute="bottom" id="uUd-dJ-U3L"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="requestCell" id="opv-xs-k5x" customClass="RequestsTableViewCell" customModule="GuildManager" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="opv-xs-k5x" id="YxK-E6-2c5">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
