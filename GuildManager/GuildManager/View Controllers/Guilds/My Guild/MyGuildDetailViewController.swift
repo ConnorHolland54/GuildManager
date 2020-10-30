@@ -21,14 +21,24 @@ class MyGuildDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         guard let name = guild?.guildName else {return}
         GuildController.shared.selectedGuildName = guild?.guildName
+//        GuildController.shared.fetchRequestsFor(guildName: name)
+        
+        //test
         GuildController.shared.fetchRequestsFor(guildName: name)
-        print(GuildController.shared.guildRequestsPlayer)
+        GuildController.shared.fetchMembers()
+        
+        
+        print(GuildController.shared.members.count)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func memberButtonTapped(_ sender: Any) {
+        guard let name = GuildController.shared.selectedGuildName else {return}
+        print("Hit")
+    }
     
     // MARK: - Navigation
 
