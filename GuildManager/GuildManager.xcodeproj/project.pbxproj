@@ -10,6 +10,7 @@
 		2AA304E86B44EA0FCF219161 /* Pods_GuildManager_GuildManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3FBCC72268284190D80433 /* Pods_GuildManager_GuildManagerUITests.framework */; };
 		8A6B753FB5907E68DBB64FD2 /* Pods_GuildManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA687E580D66F0AF9C6CA3CF /* Pods_GuildManagerTests.framework */; };
 		DC7275ED19975FA5457C1B0F /* Pods_GuildManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134230F9082EB4D0183E9391 /* Pods_GuildManager.framework */; };
+		DE149D83254B8D2E000C216C /* MembersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE149D82254B8D2E000C216C /* MembersListTableViewController.swift */; };
 		DE47419B253E1E8200DFC051 /* MainApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE47419A253E1E8200DFC051 /* MainApp.storyboard */; };
 		DE4741BC253E1F9D00DFC051 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4741BB253E1F9D00DFC051 /* SideMenuNavigationController.swift */; };
 		DE4741D4253E25AE00DFC051 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4741D3253E25AE00DFC051 /* ProfileViewController.swift */; };
@@ -73,6 +74,7 @@
 		9F7BF3C9758007548AF52003 /* Pods-GuildManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager.debug.xcconfig"; path = "Target Support Files/Pods-GuildManager/Pods-GuildManager.debug.xcconfig"; sourceTree = "<group>"; };
 		B8ED84E88F2F5C8D4B6EC888 /* Pods-GuildManager-GuildManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuildManager-GuildManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GuildManager-GuildManagerUITests/Pods-GuildManager-GuildManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA687E580D66F0AF9C6CA3CF /* Pods_GuildManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuildManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE149D82254B8D2E000C216C /* MembersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersListTableViewController.swift; sourceTree = "<group>"; };
 		DE47419A253E1E8200DFC051 /* MainApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainApp.storyboard; sourceTree = "<group>"; };
 		DE4741BB253E1F9D00DFC051 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		DE4741D3253E25AE00DFC051 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				DECEE63F2548A3A8005991B7 /* MyGuildDetailViewController.swift */,
 				DECEE64B2548A939005991B7 /* RequestsTableViewCell.swift */,
 				DECEE6502548C55F005991B7 /* RequestsTableViewController.swift */,
+				DE149D82254B8D2E000C216C /* MembersListTableViewController.swift */,
 			);
 			path = "My Guild";
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				DE6B3856253F8D4D00CFF9E7 /* GuildsViewController.swift in Sources */,
 				DE96AB9F253FB27D006E1215 /* MyGuildsViewController.swift in Sources */,
 				DE4741E1253E30A000DFC051 /* SideMenuTableViewController.swift in Sources */,
+				DE149D83254B8D2E000C216C /* MembersListTableViewController.swift in Sources */,
 				DE628E86253D0DDB009C22D7 /* Alliance Controller.swift in Sources */,
 				DECEE6512548C55F005991B7 /* RequestsTableViewController.swift in Sources */,
 				DE628E09253D0670009C22D7 /* AppDelegate.swift in Sources */,
